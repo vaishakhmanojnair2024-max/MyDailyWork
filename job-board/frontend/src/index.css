@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: 'Times New Roman',  sans-serif;
+  background-color: #f4f6f9;
+}
+
+h1 {
+  text-align: left;
+}
+
+nav {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.container{
+  min-width: 100%;
+  margin: auto;
+}
+
+
+.logo{
+  height: 15%;
+  width : 25%;
+}
+
+input {
+  padding: 8px;
+  margin: 5px 0;
+  width: 250px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.job-card {
+  background: white;
+  padding: 15px;
+  margin: 15px auto;
+  width: 400px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.job-card a {
+    text-decoration: none;
+    color: black;
+}
+
+.job-card a:hover {
+    color: #007bff;
+}
+.search-bar {
+    padding: 10px;
+    width: 300px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
