@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Take Quiz</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="quiz-page">
+<nav>
+<a href="index.html">Home</a>
+<a href="createQuiz.html">Create Quiz</a>
+<a href="quizList.html">Take Quiz</a>
+<a id="authLink"></a>
+</nav>
+<div class="quiz-container">
+
+<div class="progress-bar">
+<div id="progress"></div>
+</div>
+
+<p id="questionNumber"></p>
+
+<h2 id="quizTitle"></h2>
+
+<div id="questionBox"></div>
+
+<button class="next-btn" onclick="nextQuestion()">Next</button>
+
+</div>
+
+<script src="js/script.js"></script>
+
+<script>
+
+const user = localStorage.getItem("user");
+const authLink = document.getElementById("authLink");
+
+if(user){
+
+authLink.innerText = "Logout";
+authLink.onclick = logout;
+
+}else{
+
+authLink.innerText = "Login";
+authLink.href = "login.html";
+
+}
+
+</script>
+
+</body>
+</html>

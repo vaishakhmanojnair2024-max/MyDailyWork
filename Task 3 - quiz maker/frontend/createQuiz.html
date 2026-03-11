@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create Quiz</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<nav>
+<a href="index.html">Home</a>
+<a href="createQuiz.html">Create Quiz</a>
+<a href="quizList.html">Take Quiz</a>
+<a id="authLink"></a>
+</nav>
+<div class="container">
+
+<h2>Create Quiz</h2>
+
+<input id="title" placeholder="Quiz Title">
+
+<div id="questions"></div>
+
+<button onclick="addQuestion()">Add Question</button>
+<button onclick="saveQuiz()">Save Quiz</button>
+
+</div>
+<script src="js/script.js"></script>
+<footer>
+Online Quiz Maker © 2026
+</footer>
+
+<script>
+
+const user = localStorage.getItem("user");
+const authLink = document.getElementById("authLink");
+
+if(user){
+
+authLink.innerText = "Logout";
+authLink.onclick = logout;
+
+}else{
+
+authLink.innerText = "Login";
+authLink.href = "login.html";
+
+}
+
+</script>
+
+</body>
+</html>

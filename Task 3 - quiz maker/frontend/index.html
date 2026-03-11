@@ -1,0 +1,67 @@
+<body>
+
+<link rel="stylesheet" href="css/style.css">
+<nav>
+<a href="index.html">Home</a>
+<a href="createQuiz.html">Create Quiz</a>
+<a href="quizList.html">Take Quiz</a>
+<a id="authLink"></a>
+</nav>
+
+<h1>Online Quiz Maker</h1>
+
+<div class="container">
+<p id="welcome"></p>
+
+<script>
+
+const user = localStorage.getItem("user");
+
+if(user){
+document.getElementById("welcome").innerText =
+"Welcome " + user;
+}
+
+</script>
+
+<p style="text-align:center">
+Create quizzes and test your knowledge.
+</p>
+
+<div style="text-align:center">
+
+<a href="createQuiz.html">
+<button>Create Quiz</button>
+</a>
+
+<a href="quizList.html">
+<button>Take Quiz</button>
+</a>
+
+</div>
+
+</div>
+
+<footer>
+Online Quiz Maker © 2026
+</footer>
+
+<script>
+
+const authLink = document.getElementById("authLink");
+
+if(user){
+
+authLink.innerText = "Logout";
+authLink.onclick = logout;
+
+}else{
+
+authLink.innerText = "Login";
+authLink.href = "login.html";
+
+}
+
+</script>
+
+</body>
